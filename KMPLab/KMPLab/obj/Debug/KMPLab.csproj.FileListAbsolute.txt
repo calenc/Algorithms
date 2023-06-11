@@ -1,0 +1,7 @@
+C:\Users\freez\3230 VS Projects\KMPLab\KMPLab\bin\Debug\KMPLab.exe.config
+C:\Users\freez\3230 VS Projects\KMPLab\KMPLab\bin\Debug\KMPLab.exe
+C:\Users\freez\3230 VS Projects\KMPLab\KMPLab\bin\Debug\KMPLab.pdb
+C:\Users\freez\3230 VS Projects\KMPLab\KMPLab\obj\Debug\KMPLab.csproj.AssemblyReference.cache
+C:\Users\freez\3230 VS Projects\KMPLab\KMPLab\obj\Debug\KMPLab.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\KMPLab\KMPLab\obj\Debug\KMPLab.exe
+C:\Users\freez\3230 VS Projects\KMPLab\KMPLab\obj\Debug\KMPLab.pdb

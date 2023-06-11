@@ -1,0 +1,7 @@
+C:\Users\freez\3230 VS Projects\StringLab\StringLab\bin\Debug\StringLab.exe.config
+C:\Users\freez\3230 VS Projects\StringLab\StringLab\bin\Debug\StringLab.exe
+C:\Users\freez\3230 VS Projects\StringLab\StringLab\bin\Debug\StringLab.pdb
+C:\Users\freez\3230 VS Projects\StringLab\StringLab\obj\Debug\StringLab.csproj.AssemblyReference.cache
+C:\Users\freez\3230 VS Projects\StringLab\StringLab\obj\Debug\StringLab.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\StringLab\StringLab\obj\Debug\StringLab.exe
+C:\Users\freez\3230 VS Projects\StringLab\StringLab\obj\Debug\StringLab.pdb

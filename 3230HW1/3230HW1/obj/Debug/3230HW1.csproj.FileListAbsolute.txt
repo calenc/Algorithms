@@ -1,0 +1,7 @@
+C:\Users\freez\3230 VS Projects\3230HW1\3230HW1\bin\Debug\3230HW1.exe.config
+C:\Users\freez\3230 VS Projects\3230HW1\3230HW1\bin\Debug\3230HW1.exe
+C:\Users\freez\3230 VS Projects\3230HW1\3230HW1\bin\Debug\3230HW1.pdb
+C:\Users\freez\3230 VS Projects\3230HW1\3230HW1\obj\Debug\3230HW1.csproj.AssemblyReference.cache
+C:\Users\freez\3230 VS Projects\3230HW1\3230HW1\obj\Debug\3230HW1.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\3230HW1\3230HW1\obj\Debug\3230HW1.exe
+C:\Users\freez\3230 VS Projects\3230HW1\3230HW1\obj\Debug\3230HW1.pdb

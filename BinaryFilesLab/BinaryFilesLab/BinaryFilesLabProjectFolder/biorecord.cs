@@ -1,0 +1,222 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+using System.Runtime.InteropServices;
+
+namespace homework1
+{
+    // Class biorecord
+    // Manages the binary records and file access
+    class biorecord
+    {
+        BinaryFile binfile; // Input/output binary file
+
+	    // Binary record for plant sampling data
+	    //    according to C#
+	    // See http://www.codeproject.com/KB/files/fastbinaryfileinput.aspx
+	    //   for details
+        [StructLayout(LayoutKind.Explicit, Size = 236)]
+        private struct bioStruct
+        {
+            [FieldOffset(0)]
+            internal int id;
+            [FieldOffset(4)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
+            internal char[] commonName;
+            [FieldOffset(68)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
+            internal char[] sciName;
+            [FieldOffset(132)]
+            internal double latitude;
+            [FieldOffset(140)]
+            internal double longitude;
+            [FieldOffset(148)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 20)]
+            internal char[] date;
+            [FieldOffset(168)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 64)]
+            internal char[] name;
+            [FieldOffset(232)]
+            internal int numb;
+
+	        // Constructor to make sure blanks get in the
+	        // strings and default values in the other
+	        // fields
+            public bioStruct(int a)
+            {
+                string blanks = "                                                                                 ";
+                id = -1; 
+		        commonName = blanks.ToCharArray(0, 64); 
+		        sciName = blanks.ToCharArray(0, 64);
+                latitude = 0.0; 
+		        longitude = 0.0; 
+		        date = blanks.ToCharArray(0, 20);
+                name = blanks.ToCharArray(0, 64);
+                numb = -1;
+            } // bioStruct()
+        } // struct bioStruct()
+
+	    // writeRecord translates from normal data to the
+	    // binary record
+        public void writeRecord(int i, string s1, string s2, 
+	                        double lat, double lon, string d, string n, int num)
+         {
+	        // Create a new record and copy the data in, painfully
+            bioStruct rec = new bioStruct(1);
+            rec.id = i;
+            for (int j = 0; j < s1.Length; j++) rec.commonName[j] = s1[j];
+            for (int j = 0; j < s2.Length; j++) rec.sciName[j] = s2[j];
+            rec.latitude = lat;
+            rec.longitude = lon;
+            for (int j = 0; j < d.Length; j++) rec.date[j] = d[j];
+            for (int j = 0; j < n.Length; j++) rec.name[j] = n[j];
+            rec.numb = num;
+
+	        // See the reference above for pinning and
+	        // marshaling details
+            byte[] buffer = new byte[Marshal.SizeOf(typeof(bioStruct))];
+            GCHandle handle = GCHandle.Alloc(buffer, GCHandleType.Pinned);
+            Marshal.StructureToPtr(rec, handle.AddrOfPinnedObject(), false);
+
+	        // Actually write the data
+            binfile.write(buffer, Marshal.SizeOf(typeof(bioStruct)));
+            handle.Free();
+         } // writeRecord()
+
+	    // readRecord handles the details of marshaling data
+	    // back from the binary file into a record
+        private bioStruct readRecord()
+        {
+	        // Create a new record to hold the data read
+            bioStruct rec = new bioStruct(1);
+            byte[] buffer;
+
+	        // Read the data into the byte buffer buffer
+            buffer = binfile.read(Marshal.SizeOf(typeof(bioStruct)));
+            GCHandle handle = GCHandle.Alloc(buffer, GCHandleType.Pinned);
+
+	        // Cast the bytes into the record
+            rec = (bioStruct)Marshal.PtrToStructure(handle.AddrOfPinnedObject(), 
+	             typeof(bioStruct));
+            return rec;
+        } // readRecord()
+
+	    // Opens a | delimited text file, reads its data in
+	    // normal format, calls writeRecord() to write it in
+	    // binary form
+        public string ProcessTextFile(string textFileName)
+        {
+	        // Create a text file reader
+            StreamReader f = new StreamReader(textFileName);
+
+	        // Create a binary file writer
+            string binFileName = textFileName.Replace(".txt", ".dat");
+            System.Console.WriteLine("file name = " + binFileName);
+            binfile = new BinaryFile(binFileName, true);
+            string records = "";
+	        // Read until done
+            while (f.Peek() != -1)
+            {
+		    // Get a line
+                string str = f.ReadLine();
+		    // Split the line by |
+                string[] s = str.Split('|');
+
+                string line = "";
+		    // Display the data
+                for (int i=0; i<8; i++)
+                {
+                   System.Console.WriteLine(s[i]);
+                    line += s[i] + " "; 
+                } // for
+
+                // Write to the binary file
+                writeRecord(Convert.ToInt32(s[0]), s[1], s[2],
+                    Convert.ToDouble(s[3]),
+                    Convert.ToDouble(s[4]), s[5], s[6], Convert.ToInt32(s[7]));
+
+                line += "|";
+                records += line;
+            } // while
+	    
+	        // Close the text and binary output files
+            f.Close();
+            binfile.Close();
+            return records;
+        } // ProcessTextFile()
+
+	    // ProcessBinaryFile reads records from an existing
+	    // binary file and displays them
+        public void ProcessBinaryFile(string binaryFileName)
+        {
+            bioStruct rec;  // one record
+            long where = 0; // file byte counter
+            int  i = 0;     // file record counter
+
+            string txtFileName = binaryFileName.Replace(".dat", "_2.txt");
+            string longRecord = "";
+            // Open the binary file for read access
+            binfile = new BinaryFile(binaryFileName, false);
+	        // Get its length
+            long length = binfile.getLength();
+
+	        // Read the first record
+            rec = readRecord();
+            System.Console.WriteLine("Read from binary file");
+
+	        // Continue while not at end-of-file
+            while (where < length)
+            {
+                string convertedRecord = "";
+                // Convert the record to regular data and
+                // display it
+                System.Console.WriteLine("Record # " + i);
+                System.Console.WriteLine("id: " + rec.id);
+                convertedRecord += rec.id.ToString().Trim() + "|";
+                string str = new string(rec.commonName);
+                System.Console.WriteLine("common name: " + str);
+                convertedRecord += str.Trim() + "|";
+                string str2 = new string(rec.sciName);
+                System.Console.WriteLine("scientific name: " + str2);
+                convertedRecord += str2.Trim() + "|";
+                System.Console.WriteLine("latitude: " + rec.latitude);
+                convertedRecord += rec.latitude.ToString().Trim() + "|";
+                System.Console.WriteLine("longitude: " + rec.longitude);
+                convertedRecord += rec.longitude.ToString().Trim() + "|";
+                string str4 = new string(rec.date);
+                System.Console.WriteLine("date: " + str4);
+                convertedRecord += str4.Trim() + "|";
+                string str5 = new string(rec.name);
+                System.Console.WriteLine("name: " + str5);
+                convertedRecord += str5.Trim() + "|";
+                System.Console.WriteLine("number: " + rec.numb);
+                convertedRecord += rec.numb.ToString().Trim() + "|?";
+
+                longRecord += convertedRecord;
+                longRecord.Trim();
+		        // Read the next record
+                rec = readRecord();
+
+		        // Update the byte and record counters
+                where += Marshal.SizeOf(typeof(bioStruct));
+                i++;
+            } // while
+
+            string[] recsWrite = longRecord.Split('?');
+
+            using (StreamWriter text = new StreamWriter(txtFileName))
+            {
+                for (int k = 0; k < recsWrite.Length - 1; k++)
+                {
+                    text.WriteLine(recsWrite[k]);
+                }
+            }
+
+            // Close the binary file
+            binfile.Close();
+        } // ProcessBinaryFile()
+        
+    } // class biorecord
+}

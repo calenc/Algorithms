@@ -1,0 +1,9 @@
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\bin\Debug\homework1.exe
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\bin\Debug\homework1.pdb
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\obj\x86\Debug\BinaryFilesLab.csproj.AssemblyReference.cache
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\obj\x86\Debug\homework1.Form1.resources
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\obj\x86\Debug\homework1.Properties.Resources.resources
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\obj\x86\Debug\BinaryFilesLab.csproj.GenerateResource.cache
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\obj\x86\Debug\BinaryFilesLab.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\obj\x86\Debug\homework1.exe
+C:\Users\freez\3230 VS Projects\BinaryFilesLab\BinaryFilesLab\BinaryFilesLabProjectFolder\obj\x86\Debug\homework1.pdb

@@ -1,0 +1,6 @@
+C:\Users\freez\3230 VS Projects\Lab6\Lab6\bin\Release\Lab6.exe.config
+C:\Users\freez\3230 VS Projects\Lab6\Lab6\bin\Release\Lab6.exe
+C:\Users\freez\3230 VS Projects\Lab6\Lab6\bin\Release\Lab6.pdb
+C:\Users\freez\3230 VS Projects\Lab6\Lab6\obj\Release\Lab6.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\Lab6\Lab6\obj\Release\Lab6.exe
+C:\Users\freez\3230 VS Projects\Lab6\Lab6\obj\Release\Lab6.pdb

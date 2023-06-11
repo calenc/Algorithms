@@ -1,0 +1,77 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;   // used to create a stopwatch timer for the program
+using System.Numerics;      // used to create a stopwatch timer for the program
+// ---------------------------------------------------------------------------
+// File name: HW1_Cummings_Calen.cs/HW1_Cummings_Calen.txt
+// Project name: 3230HW1
+// ---------------------------------------------------------------------------
+// Creator’s name and email: Calen Cummings, cummingscc@etsu.edu
+// Course-Section: 001 
+// Creation Date: 01/19/2022
+// ---------------------------------------------------------------------------
+
+namespace _3230HW1
+{
+   /**
+    * Class Name: HW1_Calen_Cummings <br>
+    * Class Purpose: Determine the shortest distance between any two points of a set of user input data. <br>
+    *
+    * <hr>
+    * Date created: 01/19/2022 <br>
+    * @author Calen Cummings
+    */
+    class HW1_Cummings_Calen
+    {
+        /**
+         * Method Name: main <br>
+         * Method Purpose: Program that will read user input coordinates and determine the shortest distance between any pair of points in the set <br>
+         *
+         * <hr>
+         * Date created: 01/19/2022 <br>
+         *
+         * <hr>
+         * Notes on specifications, special algorithms, and assumptions: N/A
+         *
+         * <hr>
+         * @param args array of Strings (not used in this program)
+         */
+        static void Main(string[] args)
+        {
+            double smallestDistance = 100000000;   // double value to hold the current smallest distance between a pair of points; high initial value so the first distance found can be logged
+            int points = Int32.Parse(Console.ReadLine());   // reads the first line to determine how many data points will be entered/need to be read in
+            int[] x = new int[points];    // array to store x values; size set to the number of coordinate points
+            int[] y = new int[points];    // array to store y values; size set to the number of coordinate points
+            Stopwatch sw = Stopwatch.StartNew(); // creates sw and starts stopwatch
+
+            for (int i = 0; i < points; i++)
+            {
+                String instring = Console.ReadLine();   // read the line to get the x and y coordinates for the point
+                string[] values = instring.Split(' ');  // breaks apart the string so we can isolate and store each coordinate as an integer
+
+                Int32.TryParse(values[0], out x[i]);    // stores the first value as the x value in the x array
+                Int32.TryParse(values[1], out y[i]);    // stores the second value as the y value in the y array
+                Console.WriteLine(x[i] + " " + y[i]);   // prints the coordinates to the screen to show it was correctly read and stored
+
+                for (int k = 0; k < i; k++)     // calculate the distances between the added point and all previous points
+                {
+                    double xSquared = Math.Pow((x[k] - x[i]), 2);   // Calculates the change in x from the two points, and squares it
+                    double ySquared = Math.Pow((y[k] - y[i]), 2);   // Calculates the change in y from the two points, and squares it
+                    double distance = Math.Sqrt(xSquared + ySquared);   // Calculates the square root of the added values to find the distance between the points
+
+                    if (distance < smallestDistance)
+                    {
+                        smallestDistance = distance;    // if the calculated distance is smaller than any distance found thus far, assign it as the new smallest distance
+                    } // end if (distance < smallestDistance)
+                } // end for (int k = 0; k < i; k++)
+            } // end for (int i = 0; i < points; i++)
+
+            sw.Stop(); // stops stopwatch
+            Console.WriteLine(Math.Round(smallestDistance, 6));    // prints the smallest distance found between any pair of points to the screen, and rounds to 6 decimal places
+            Console.WriteLine("Time used: {0} secs", sw.Elapsed.TotalMilliseconds / 1000);  // prints the total time taken by the algorithm to the screen
+        } // end main String[]
+    } // end HW1_Cummings_Calen
+} // end _3230HW1

@@ -1,0 +1,7 @@
+C:\Users\freez\3230 VS Projects\Lab8LCS\Lab8LCS\bin\Debug\Lab8LCS.exe.config
+C:\Users\freez\3230 VS Projects\Lab8LCS\Lab8LCS\bin\Debug\Lab8LCS.exe
+C:\Users\freez\3230 VS Projects\Lab8LCS\Lab8LCS\bin\Debug\Lab8LCS.pdb
+C:\Users\freez\3230 VS Projects\Lab8LCS\Lab8LCS\obj\Debug\Lab8LCS.csproj.AssemblyReference.cache
+C:\Users\freez\3230 VS Projects\Lab8LCS\Lab8LCS\obj\Debug\Lab8LCS.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\Lab8LCS\Lab8LCS\obj\Debug\Lab8LCS.exe
+C:\Users\freez\3230 VS Projects\Lab8LCS\Lab8LCS\obj\Debug\Lab8LCS.pdb

@@ -1,0 +1,7 @@
+C:\Users\freez\3230 VS Projects\Project3\Project3c\bin\Debug\Project3c.exe.config
+C:\Users\freez\3230 VS Projects\Project3\Project3c\bin\Debug\Project3c.exe
+C:\Users\freez\3230 VS Projects\Project3\Project3c\bin\Debug\Project3c.pdb
+C:\Users\freez\3230 VS Projects\Project3\Project3c\obj\Debug\Project3c.csproj.AssemblyReference.cache
+C:\Users\freez\3230 VS Projects\Project3\Project3c\obj\Debug\Project3c.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\Project3\Project3c\obj\Debug\Project3c.exe
+C:\Users\freez\3230 VS Projects\Project3\Project3c\obj\Debug\Project3c.pdb

@@ -1,0 +1,7 @@
+C:\Users\freez\3230 VS Projects\Project1CummingsC\Project1CummingsC\bin\Debug\Project1CummingsC.exe.config
+C:\Users\freez\3230 VS Projects\Project1CummingsC\Project1CummingsC\bin\Debug\Project1CummingsC.exe
+C:\Users\freez\3230 VS Projects\Project1CummingsC\Project1CummingsC\bin\Debug\Project1CummingsC.pdb
+C:\Users\freez\3230 VS Projects\Project1CummingsC\Project1CummingsC\obj\Debug\Project1CummingsC.csproj.AssemblyReference.cache
+C:\Users\freez\3230 VS Projects\Project1CummingsC\Project1CummingsC\obj\Debug\Project1CummingsC.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\Project1CummingsC\Project1CummingsC\obj\Debug\Project1CummingsC.exe
+C:\Users\freez\3230 VS Projects\Project1CummingsC\Project1CummingsC\obj\Debug\Project1CummingsC.pdb

@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Lab1
+{
+    class Lab1Question1
+    {
+        static void Main(string[] args)
+        {
+            bool found = false;
+
+            while (found == false)
+            {
+                int readInt = 0;
+                Int32.TryParse(Console.ReadLine(), out readInt);
+
+                if (readInt == 42)
+                {
+                    found = true;
+                }
+                else
+                {
+                    Console.WriteLine(readInt);
+                }
+            }
+        }
+    }
+}

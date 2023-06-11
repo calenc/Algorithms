@@ -1,0 +1,16 @@
+C:\usr\COURSES\csci2230\code\homework1\homework1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\usr\COURSES\csci2230\code\homework1\homework1\obj\x86\Debug\homework1.Properties.Resources.resources
+C:\usr\COURSES\csci2230\code\homework1\homework1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\usr\COURSES\csci2230\code\homework1\homework1\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\usr\COURSES\csci2230\code\homework1\homework1\bin\Debug\homework1.exe
+C:\usr\COURSES\csci2230\code\homework1\homework1\bin\Debug\homework1.pdb
+C:\usr\COURSES\csci2230\code\homework1\homework1\obj\x86\Debug\homework1.exe
+C:\usr\COURSES\csci2230\code\homework1\homework1\obj\x86\Debug\homework1.pdb
+C:\usr\COURSES\csci2230\code\homework1\homework1\obj\x86\Debug\homework1.Form1.resources
+Q:\3230\Labs\filelab2014\FileLab\FileLab\hw1\homework1\obj\x86\Debug\homework1.exe
+Q:\3230\Labs\filelab2014\FileLab\FileLab\hw1\homework1\obj\x86\Debug\homework1.pdb
+Q:\3230\Labs\filelab2014\FileLab\FileLab\hw1\homework1\bin\Debug\homework1.exe
+Q:\3230\Labs\filelab2014\FileLab\FileLab\hw1\homework1\bin\Debug\homework1.pdb
+Q:\3230\Labs\filelab2014\FileLab\FileLab\hw1\homework1\obj\x86\Debug\homework1.Form1.resources
+Q:\3230\Labs\filelab2014\FileLab\FileLab\hw1\homework1\obj\x86\Debug\homework1.Properties.Resources.resources
+Q:\3230\Labs\filelab2014\FileLab\FileLab\hw1\homework1\obj\x86\Debug\homework1.csproj.GenerateResource.Cache

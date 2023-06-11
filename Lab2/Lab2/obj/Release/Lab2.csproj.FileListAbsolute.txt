@@ -1,0 +1,7 @@
+C:\Users\freez\3230 VS Projects\Lab2\Lab2\bin\Release\Lab2.exe.config
+C:\Users\freez\3230 VS Projects\Lab2\Lab2\bin\Release\Lab2.exe
+C:\Users\freez\3230 VS Projects\Lab2\Lab2\bin\Release\Lab2.pdb
+C:\Users\freez\3230 VS Projects\Lab2\Lab2\obj\Release\Lab2.csproj.CoreCompileInputs.cache
+C:\Users\freez\3230 VS Projects\Lab2\Lab2\obj\Release\Lab2.exe
+C:\Users\freez\3230 VS Projects\Lab2\Lab2\obj\Release\Lab2.pdb
+C:\Users\freez\3230 VS Projects\Lab2\Lab2\obj\Release\Lab2.csproj.AssemblyReference.cache
